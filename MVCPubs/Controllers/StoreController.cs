@@ -40,11 +40,10 @@ namespace MVCPubs.Controllers
         }
 
 
-        [HttpGet]
-        // [Route("Store/TraerXPaisCiudad/{pais:string}/{ciudad:string}")]
-        public IActionResult TraerXPaisCiudad(string pais, string ciudad)
+        
+        public IActionResult TraerXCiudad(string City)
         {
-            List<Store> list = BuscaXPaisCiudad(pais, ciudad);
+            IEnumerable<Store> list = BuscaXCiudad(City);
             if (list == null)
             {
                 return NotFound();
@@ -56,12 +55,12 @@ namespace MVCPubs.Controllers
         }
 
         [NonAction]
-        public List<Store> BuscaXPaisCiudad(string pais, string ciudad)
+        public IEnumerable<Store> BuscaXCiudad(string ciudad)
         {
-            List<Store> storeList = (from a in context.Stores
-                                     where a.City.ToUpper() == ciudad.ToUpper() && a.State.ToUpper() == pais.ToUpper()
-                                     select a).ToList();
-            return storeList;
+            IEnumerable<Store> list = (from a in context.Stores
+                                where a.City.ToUpper() == ciudad.ToUpper()
+                                select a).ToList();
+            return list;
         }
 
 
