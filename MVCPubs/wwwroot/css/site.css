@@ -1,0 +1,173 @@
+﻿html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-size: 16px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #faedcd;
+    padding: 0 3rem;
+}
+
+.header__titulo{
+    text-align:right;
+    font-size:3rem;
+    padding:1.5rem;
+}
+
+.header__nav{
+    padding:3rem;
+    text-align:right;
+    font-weight:bold
+}
+.header__nav a{
+    display:inline-block;
+    text-decoration:none;   
+    font-size:2rem;
+    color:black;
+    margin:2rem;
+
+}
+
+.header__nav a:hover{   
+    color:darkred;
+    transition:all 0.5s;
+}
+
+
+.section{
+    padding:3rem;
+    width:80%;
+    margin:0 auto;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:3rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 3rem;
+    background-color: #faedcd;
+}
+
+
+.main{
+    margin:0 auto;
+    width:80%;
+}
+
+.main__nav{
+    display:flex;
+    flex-direction:column;
+    padding:2rem;
+    text-align:center;
+}
+
+.main__nav nav {
+    display:flex;
+    justify-content:space-evenly;
+   
+}
+
+.main__nav nav a {
+   text-decoration: none;
+   color: black;
+   font-weight: bold;
+   color:darkred;
+}
+
+.main__nav nav a:hover{
+    color:black;
+}
+
+
+.contenido{
+    margin-top: 5rem;
+    margin-bottom:5rem;
+}
+
+table{
+    margin: 0 auto;
+}
+
+th,td{
+    padding:1rem;
+}
+
+.bordeNegro{
+    border:2px solid black;
+}
+
+/***********************************************/
+/*Pagina Create*/
+
+.contenido h3{
+    font-size:3rem;
+    text-align:center;
+    margin-bottom:4rem;
+}
+
+
+form div {
+        margin: 3rem;
+        display: flex;
+        justify-content: center;
+        gap:4rem;
+}
+
+label {
+    font-weight:bold;
+}
+
+.button {
+    margin: 0 auto;
+    padding: 1rem 4rem;
+    background-color: #bc4749;
+    border-radius: 1rem;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.button:hover{
+    background-color:black;
+    color:white;
+    transition:all .5s;
+}
+
+/***********************************************/
+/*Delete*/
+
+p{
+    text-align:center;
+    font-weight:bold;
+}
+
+.aEliminar{
+    margin-bottom:4rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+

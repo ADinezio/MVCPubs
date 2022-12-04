@@ -1,0 +1,60 @@
+﻿@model MVCPubs.Models.Store;
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="main__nav">
+    <h2>Eliminar</h2>
+
+    <nav class="nav">
+        <a asp-action="Index" asp-controller="Store">Index</a>
+        <a asp-action="TraerXPaisCiudad" asp-controller="Store">Buscar Ciudad</a>
+    </nav>
+</div>
+<section class="contenido">
+ 
+    <p>Desea eliminar este Store? </p>
+
+    @using (Html.BeginForm("Delete", "Store", FormMethod.Post))
+    {
+        <div class="aEliminar">
+            <table class="bordeNegro">
+                <thead>
+                    <tr class="bordeNegro">
+
+                        <th class="bordeNegro">@Html.DisplayNameFor(model => model.StorName)</th>
+                        <th class="bordeNegro">@Html.DisplayNameFor(model => model.StorAddress)</th>
+                        <th class="bordeNegro">@Html.DisplayNameFor(model => model.City)</th>
+                        <th class="bordeNegro">@Html.DisplayNameFor(model => model.State)</th>
+                        <th class="bordeNegro">@Html.DisplayNameFor(model => model.Zip)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bordeNegro">
+                        <td class="bordeNegro">
+                            @Html.DisplayFor(model => model.StorName)
+                        </td>
+                        <td class="bordeNegro">
+                            @Html.DisplayFor(model => model.StorAddress)
+                        </td>
+                        <td class="bordeNegro">
+
+                            @Html.DisplayFor(model => model.City)
+                        </td>
+                        <td class="bordeNegro">
+                            @Html.DisplayFor(model => model.State)
+                        </td>
+                        <td class="bordeNegro">
+                            @Html.DisplayFor(model => model.Zip)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <input type="submit" value="Delete " class="button" />
+        </div>
+
+    }
+
+</section>

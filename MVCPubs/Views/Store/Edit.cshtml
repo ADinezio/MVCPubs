@@ -1,0 +1,54 @@
+﻿@model MVCPubs.Models.Store;
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Modificar</h1>
+
+<div class="main__nav">
+    <h2>Modificar</h2>
+
+    <nav class="nav">
+        <a asp-action="Index" asp-controller="Store">Index</a>
+        <a asp-action="TraerXPaisCiudad" asp-controller="Store">Buscar Ciudad</a>
+        
+    </nav>
+</div>
+
+<section class="contenido">
+    
+    @using (Html.BeginForm("Edit", "Store", FormMethod.Post))
+    {
+            @Html.HiddenFor(model=>model.StorId);
+        
+        <div>
+            @Html.LabelFor(model=>model.StorName)
+            @Html.EditorFor(model=>model.StorName)
+            @Html.ValidationMessageFor(model=>model.StorName)
+        </div>
+        <div>
+            @Html.LabelFor(model=>model.StorAddress)
+            @Html.EditorFor(model=> model.StorAddress)
+            @Html.ValidationMessageFor(model=>model.StorAddress)
+        </div>
+        <div>
+            @Html.LabelFor(model=>model.City)
+            @Html.EditorFor(model=> model.City)
+            @Html.ValidationMessageFor(model=>model.City)
+        </div>
+        <div>
+            @Html.LabelFor(model=>model.State)
+            @Html.EditorFor(model=> model.State)
+            @Html.ValidationMessageFor(model=>model.State)
+        </div>
+        <div>
+            @Html.LabelFor(model=>model.Zip)
+            @Html.EditorFor(model=> model.Zip)
+            @Html.ValidationMessageFor(model=>model.Zip)
+        </div>
+        <div>
+            <input type="submit" value="Modificar" class="button" />
+        </div>
+    }
+
+</section>
